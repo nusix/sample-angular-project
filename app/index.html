@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="bower_components/angular/angular.min.js"></script>
-    </head>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My sample AngularJS application | Created by Nus!X</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <!-- <link rel="stylesheet" href="app.css"> -->
 
-    <body>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
 
-        <div ng-app="myApp" ng-controller="myCtrl1">
-            <h1>Ahojte v nasom sample projekte</h1>
+    <script src="app.js"></script>
+    <script src="/index/index.js"></script>
+    <script src="/page2/page2.js"></script>
+</head>
 
-            <p>Angular funguje : {{ var }}</p>
-        </div>
+<body>
 
-    </body>
+    <div ng-app="myApp" ng-controller="mainCtrl">
+        <h1>Ahojte v nasom sample projekte</h1>
+
+        <p>Angular funguje : {{ var }}</p>
+
+        <ul>
+            <li><a href="#!/index">Index</a></li>
+            <li><a href="#!/page2">Page2</a></li>
+        </ul>
+
+        <div ng-view></div>
+    </div>
+
+</body>
+
 </html>
-
-
-<script>
-
-var app = angular.module("myApp", []);
-
-app.controller("myCtrl1", function($scope) {
-    $scope.var = 66;
-
-    console.info('X1 - App sample project sa spustila');
-});
-
-</script>
