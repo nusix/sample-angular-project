@@ -1,0 +1,15 @@
+{
+  "name": "sample-angular-application",
+  "description": "This app briefly describes my angular skills",
+  "version": "1.0.0",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  }
+}

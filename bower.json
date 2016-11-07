@@ -1,0 +1,8 @@
+{
+  "name": "sample-angular-application",
+  "description": "This app briefly describes my angular skills",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "~1.5.0"
+  }
+}

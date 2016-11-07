@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="bower_components/angular/angular.min.js"></script>
+    </head>
+
+    <body>
+
+        <div ng-app="myApp" ng-controller="myCtrl1">
+            <h1>Ahojte v nasom sample projekte</h1>
+
+            <p>Angular funguje : {{ var }}</p>
+        </div>
+
+    </body>
+</html>
+
+
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("myCtrl1", function($scope) {
+    $scope.var = 66;
+
+    console.info('X1 - App sample project sa spustila');
+});
+
+</script>
