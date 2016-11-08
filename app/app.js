@@ -4,7 +4,8 @@
 var app = angular.module('myApp', [
     'ngRoute',
     'myApp.index',
-    'myApp.page2'
+    'myApp.page2',
+    'myApp.personsService'
 ]);
 
 app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
