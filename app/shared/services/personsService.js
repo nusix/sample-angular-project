@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.personsService', [])
+angular.module('myApp.personsService', []);
 
 app.service("personsService", function($http){
     

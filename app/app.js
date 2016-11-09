@@ -5,7 +5,8 @@ var app = angular.module('myApp', [
     'ngRoute',
     'myApp.index',
     'myApp.page2',
-    'myApp.personsService'
+    'myApp.personsService',
+    'myApp.personSimpleDirective'
 ]);
 
 app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){

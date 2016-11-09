@@ -1,3 +1,8 @@
 <div ng-controller="indexCtrl">
-    <p>Funguje modul index : {{ indexVar }}</p>
+    <h2>Funguje modul - Index</h2>
+
+    <div ng-repeat="person in personsList.persons">
+        <div person-simple-directive data="person"></div>
+    </div>
+
 </div>
