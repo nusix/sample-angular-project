@@ -30,5 +30,18 @@ angular.module('myApp.index', ['ngRoute'])
 
     init();
 
+    var asd = function(){
+        var a = 6,
+            b = 7;
+
+        return a+b;
+    }
+
+    console.info('XXX TEST > asd', asd());
+
     console.info('X2 - indexCtrl - App sample project - spustil sa index controller ');
+})
+
+.controller('testCtrl', function() {
+    this.asd = 33;
 });
