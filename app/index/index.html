@@ -1,8 +1,10 @@
+<!-- main div of index controller -->
 <div ng-controller="indexCtrl">
-    <h2>Funguje modul - Index</h2>
+    <h2>Module - Index</h2>
+    <p>This is the value from variable defined in index controller : {{ indexVar }}.</p>
 
-    <div ng-repeat="person in personsList.persons">
-        <div person-simple-directive data="person"></div>
-    </div>
+    <h3>This is the simple directive loading for printing data in table</h3>
+    <!-- nx-data-table-directive for printing array of data in table -->
+    <div nx-data-table-directive title="'Customers'" data="personsList.persons"></div>
 
 </div>

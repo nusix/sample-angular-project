@@ -1,18 +1,18 @@
-describe('Controllers', function(){ //describe your object type
+describe('Controllers', function(){ //describe object type
 
-    beforeEach(module('myApp')); //load module<br />
+    beforeEach(module('myApp')); //load module
 
-    describe('index',function(){ //describe your app name<br />
+    describe('index',function(){ //describe app name
 
-        var myctrl;
+        var myCtrl;
 
         beforeEach(inject(function($controller){ //instantiate controller using $controller service
-            myctrl = $controller('testCtrl');
+            myCtrl = $controller('testCtrl');
         }));
 
-        it('Mode should be fun', function(){  //write tests
-            expect(myctrl.asd).toBe(66); //fail
-            // expect(myctrl.asd).toBe(33); //pass
+        it('Sample test 1 : Testing value of controller\'s variable', function(){  //write tests
+            expect(myCtrl.ctrlvar).toBe(66); //fail
+            expect(myCtrl.ctrlvar).toBe(33); //pass
         });
 
     });

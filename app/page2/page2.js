@@ -9,7 +9,7 @@ angular.module('myApp.page2', ['ngRoute'])
 }])
 
 .controller('page2Ctrl', function($scope) {
-    $scope.page2Var = 33;
+    $scope.page2Var = 68;
 
-    console.info('X2 - page2Ctrl - App sample project - spustil sa page2 controller ');
+    console.info('page2Ctrl - page2Ctrl was loaded successfully');
 });

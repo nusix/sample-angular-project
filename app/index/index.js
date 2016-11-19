@@ -9,39 +9,38 @@ angular.module('myApp.index', ['ngRoute'])
 }])
 
 .controller('indexCtrl', function($scope, personsService) {
-    $scope.indexVar = 99;
-    $scope.personsList = {};
 
+    $scope.indexVar = 99;   //sample var
+    $scope.personsList = {};    //list of persons
+
+    //getting personsList object with list of persons from personsService
     var getPersonsList = function(){
         personsService.getPersonsList(function(data){
+            //succ cbk
             $scope.personsList = data;
 
-            console.log('personsService -> getPersonsList : $scope.personsList', $scope.personsList);
+            console.log('indexCtrl -> personsService -> getPersonsList - List of persons was loaded successfully $scope.personsList', $scope.personsList);
         }, function(res){
 
-            console.error('personsService -> getPersonsList : res', res);
-            
+            //error cbk
+            console.error('indexCtrl -> personsService -> getPersonsList - Error occured during the loading List of persons res', res);
+
         });
     }
 
+    // initialization of application
     var init = function(){
         getPersonsList();
     }
 
+    // app process
     init();
 
-    var asd = function(){
-        var a = 6,
-            b = 7;
-
-        return a+b;
-    }
-
-    console.info('XXX TEST > asd', asd());
-
-    console.info('X2 - indexCtrl - App sample project - spustil sa index controller ');
+    console.info('indexCtrl - indexCtrl was loaded successfully');
 })
 
+
+// controller for testing
 .controller('testCtrl', function() {
-    this.asd = 33;
+    this.ctrlvar = 33;
 });

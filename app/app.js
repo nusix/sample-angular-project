@@ -6,7 +6,7 @@ var app = angular.module('myApp', [
     'myApp.index',
     'myApp.page2',
     'myApp.personsService',
-    'myApp.personSimpleDirective'
+    'myApp.nxDataTableDirective'
 ]);
 
 app.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
@@ -15,8 +15,10 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
     $routeProvider.otherwise({redirectTo: '/index'});
 }]);
 
-app.controller("mainCtrl", function($scope) {
-    $scope.var = 66;
 
-    console.info('X1 - mainCtrl - App sample project sa spustila ');
+// main controller of application
+app.controller("mainCtrl", function($scope) {
+    $scope.dummyVar = 66;
+
+    console.info('mainCtrl - mainCtrl was loaded successfully');
 });
