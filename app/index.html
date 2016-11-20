@@ -11,11 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">  
 
 
-    <!-- <link rel="stylesheet" href="app.css"> -->
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style/css/global.css" rel="stylesheet">
 
     <!-- source files -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
     <script src="bower_components/angular-mocks/angular-mocks.js"></script>
 
     <!-- app files -->
@@ -29,24 +32,43 @@
 <body>
 
     <!-- main div of application with mainCtrl controller defined in app.js -->
-    <div ng-app="myApp" ng-controller="mainCtrl">
-
-
-        <h1>Welcome to my sample AngularJS 1 project !</h1>
-
-        <p>This is the value from variable defined in main controller : {{ dummyVar }}.</p>
+    <div ng-app="myApp" ng-controller="mainCtrl" class="container">
 
         <!-- main menu -->
-        <h2>Main menu (modules of application)</h2>
-        <ul>
-            <li><a href="#!/index">Index</a></li>
-            <li><a href="#!/page2">Page2</a></li>
-        </ul>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <!-- TODO active class -->
+                        <!-- <h2>Main menu (modules of application)</h2> -->
+                        <!-- <li class="active"> -->
+                        <li ng-class="module === 'index' ? 'active' : ''">
+                            <a ng-click="module='index'" href="#!/index">Index
+                                 <span ng-if="module === 'index'" class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="{{ module === 'page2' ? 'active' : '' }}">
+                            <a ng-click="module='page2'" href="#!/page2">
+                                Page2
+                                <span ng-if="module === 'index'" class="sr-only">(current)</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <h1>Welcome to my sample AngularJS 1 project !</h1>
+            <p>This is the value from variable defined in main controller : {{ dummyVar }}.</p>
+        </div>
 
         <!-- div for loading modules of app (pages) -->
         <div ng-view></div>
 
-    </div>
+    </div><!-- /container -->
 
 </body>
 

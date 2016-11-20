@@ -1,10 +1,24 @@
 <!-- main div of index controller -->
-<div ng-controller="indexCtrl">
-    <h2>Module - Index</h2>
-    <p>This is the value from variable defined in index controller : {{ indexVar }}.</p>
+<div ng-controller="indexCtrl" class="row featurette">
+    <div class="col-md-12">
 
-    <h3>This is the simple directive loading for printing data in table</h3>
-    <!-- nx-data-table-directive for printing array of data in table -->
-    <div nx-data-table-directive title="'Customers'" data="personsList.persons"></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>Module - Index</h2>
+            </div>
+            <div class="panel-body">
+                <p>This is the value from variable defined in index controller : {{ indexVar }}.</p>
+            </div>
+        </div>
 
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>This is the simple directive loading for printing data in table</h3>
+            </div>
+            <div class="panel-body">
+                <!-- nx-data-table-directive for printing array of data in table -->
+                <div nx-data-table-directive title="'Customers'" data="personsList.persons"></div>
+            </div>
+        </div>
+    </div>
 </div>

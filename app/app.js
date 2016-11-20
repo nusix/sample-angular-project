@@ -19,6 +19,7 @@ app.config(['$locationProvider', '$routeProvider', function($locationProvider, $
 // main controller of application
 app.controller("mainCtrl", function($scope) {
     $scope.dummyVar = 66;
+    $scope.module = 'index';
 
     console.info('mainCtrl - mainCtrl was loaded successfully');
 });
