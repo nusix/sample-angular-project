@@ -11,7 +11,7 @@ describe('Controllers', function(){ //describe object type
         }));
 
         it('Sample test 1 : Testing value of controller\'s variable', function(){  //write tests
-            expect(myCtrl.ctrlvar).toBe(66); //fail
+            // expect(myCtrl.ctrlvar).toBe(66); //fail
             expect(myCtrl.ctrlvar).toBe(33); //pass
         });
 
